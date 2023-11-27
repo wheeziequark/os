@@ -1,7 +1,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: os
 # description will be included in the image's metadata
-description: A starting point for further customization of uBlue images. Make your own! https://ublue.it/making-your-own/
+description: os for wheezie
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 39 # latest is also supported if you want new updates ASAP
@@ -43,7 +43,7 @@ modules:
   - type: yafti # if included, yafti and it's dependencies (pip & libadwaita)
     #  will be installed and set up
     custom-flatpaks: # this section is optional
-    # - Celluloid: io.github.celluloid_player.Celluloid
+  - Celluloid: io.github.celluloid_player.Celluloid
     # - Krita: org.kde.krita
   - type: script
     scripts:
